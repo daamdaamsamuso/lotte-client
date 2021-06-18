@@ -23,7 +23,7 @@ namespace lotte_Client
         public MainWindow()
         {
             InitializeComponent();
-            MessageBox.Show("Hello world")!;
+            //wow
         }
     }
 }
