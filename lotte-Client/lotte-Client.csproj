@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,8 +36,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Json.Net, Version=1.0.33.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Json.Net.1.0.33\lib\netstandard2.0\Json.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.11.7.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.11.7\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +69,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Config\Configs.cs" />
+    <Compile Include="Config\ConfigValue.cs" />
+    <Compile Include="Databases\DatabaseController.cs" />
+    <Compile Include="Models\Data\Adver.cs" />
+    <Compile Include="UserControls\UC_Progress.xaml.cs">
+      <DependentUpon>UC_Progress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Type01.xaml.cs">
+      <DependentUpon>UC_Type01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Type02.xaml.cs">
+      <DependentUpon>UC_Type02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Convert.cs" />
+    <Compile Include="Utils\Log.cs" />
+    <Compile Include="ViewModel\ContentViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,12 +94,27 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Helpers\ScheduleAPIHelper.cs" />
+    <Compile Include="Helpers\WebAPIHelper.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControls\UC_Progress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UC_Type01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UC_Type02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AdInfoRaw.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -86,6 +132,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +140,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FTP\FTP.csproj">
+      <Project>{86a979ba-b0f8-462e-861a-f445bfb3c6cd}</Project>
+      <Name>FTP</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\lotte\LotteCinemaLibraries\LotteCinemaLibraries.Common\LotteCinemaLibraries.Common.csproj">
+      <Project>{dd372367-ffc0-46df-acfb-f072cae733d5}</Project>
+      <Name>LotteCinemaLibraries.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\lotte\LotteCinemaService\LotteCinemaService.Model.Common\LotteCinemaService.Model.Common.csproj">
+      <Project>{d4644c99-1c48-49c0-b57f-38e4ed9d5df7}</Project>
+      <Name>LotteCinemaService.Model.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\lotte\LotteCinemaService\LotteCinemaService.Model.Enum\LotteCinemaService.Model.Enum.csproj">
+      <Project>{56f1ec36-d0ca-4c8b-bd25-4df4d1efab3f}</Project>
+      <Name>LotteCinemaService.Model.Enum</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\lotte\LotteCinemaService\LotteCinemaService.WebAPI\LotteCinemaService.WebAPI.Helper\LotteCinemaService.WebAPI.Helper.csproj">
+      <Project>{dba86a6a-6a89-4870-b300-37a7218275b8}</Project>
+      <Name>LotteCinemaService.WebAPI.Helper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Config\Config.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

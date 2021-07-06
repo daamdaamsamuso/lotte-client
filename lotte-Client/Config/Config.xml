@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <!--<add key="WebServerUri" value="http://192.168.204.125:2924" />-->
+    <add key="WebServerUri" value="http://10.119.1.40:8070" />
+    <!--<add key="WebServerUri" value="http://10.51.239.217:8070/" />-->
+    <add key="CinemaCode" value="1016" />
+    <add key="StatusNumber" value="1" />
+    <add key="DayBaseTimeHour" value="4" />
+    <add key="DurationTimeSec" value="30" />
+    <add key="IsLocalVersion" value="true" />
+    <add key="IsServer" value="true" />
+    <add key="ProgramNumber" value="1" />
+    <add key="GroupIp" value="224.0.0.201" />
+    <add key="GroupPort" value="8080" />
+    <add key="SizeWidth" value="400" />
+    <add key="SizeHeight" value="300" />
+  </appSettings>
+</configuration>

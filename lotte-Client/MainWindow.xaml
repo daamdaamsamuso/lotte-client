@@ -3,10 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:control="clr-namespace:LotteCinemaLibraries.Common.Control;assembly=LotteCinemaLibraries.Common"
+        xmlns:uc="clr-namespace:lotte_Client.UserControls"
         xmlns:local="clr-namespace:lotte_Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+         Title="MainWindow" Background="Black" WindowStyle="None" WindowState="Normal" ResizeMode="NoResize" Left="0" Top="0" Width="1600" Height="900">
+    <Grid x:Name="Root">
+        <Image x:Name="Img" Stretch="Fill"/>
+        <MediaElement x:Name="Me" LoadedBehavior="Manual" Stretch="Fill"/>
+        <Viewbox>
+            <control:DownloadProgressControl DataContext="{Binding ContentViewModel}" 
+                                             Visibility="{Binding DownloadVisible}"
+                                             DownloadMessage="{Binding DownloadMessage}"
+                                             DownloadByte="{Binding DownloadByte}"
+                                             DownloadCount="{Binding DownloadCount}"
+                                             DownloadFileName="{Binding DownloadFileName}"
+                                             DownloadPercentage="{Binding DownloadPercentage}"
+                                             DownloadTotalByte="{Binding DownloadTotalByte}"
+                                             DownloadTotalCount="{Binding DownloadTotalCount}"
+                                             VisibleDownloadProgress="{Binding DownloadProgressVisible}"
+                                             />
+        </Viewbox>
+        <Grid>
+            <TextBlock x:Name="SystemMessageTextBlock" Text="Loading......" FontSize="10" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,0,0,0" TextWrapping="Wrap" />
+            <Rectangle Width="Auto" Height="40" VerticalAlignment="Top" Fill="#00000000" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown"/>
+            <Rectangle Width="40" Height="Auto" HorizontalAlignment="Right" Fill="#00000000" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown"/>
+            <Rectangle Width="40" Height="Auto" HorizontalAlignment="Left" Fill="#00000000" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown"/>
+            <Rectangle Width="Auto" Height="40" VerticalAlignment="Bottom" Fill="#00000000" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown"/>
+        </Grid>
     </Grid>
 </Window>

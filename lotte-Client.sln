@@ -5,6 +5,18 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lotte-Client", "lotte-Client\lotte-Client.csproj", "{C84EEB90-B3C1-4D9A-95F1-04AD66416F08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{043EAB94-5043-41E4-95CE-55212445C8CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTP", "FTP\FTP.csproj", "{86A979BA-B0F8-462E-861A-F445BFB3C6CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaLibraries.Common", "D:\lotte\LotteCinemaLibraries\LotteCinemaLibraries.Common\LotteCinemaLibraries.Common.csproj", "{DD372367-FFC0-46DF-ACFB-F072CAE733D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.Model.Common", "D:\lotte\LotteCinemaService\LotteCinemaService.Model.Common\LotteCinemaService.Model.Common.csproj", "{D4644C99-1C48-49C0-B57F-38E4ED9D5DF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.Model.Enum", "D:\lotte\LotteCinemaService\LotteCinemaService.Model.Enum\LotteCinemaService.Model.Enum.csproj", "{56F1EC36-D0CA-4C8B-BD25-4DF4D1EFAB3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.WebAPI.Helper", "D:\lotte\LotteCinemaService\LotteCinemaService.WebAPI\LotteCinemaService.WebAPI.Helper\LotteCinemaService.WebAPI.Helper.csproj", "{DBA86A6A-6A89-4870-B300-37A7218275B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +27,30 @@ Global
 		{C84EEB90-B3C1-4D9A-95F1-04AD66416F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C84EEB90-B3C1-4D9A-95F1-04AD66416F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C84EEB90-B3C1-4D9A-95F1-04AD66416F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{043EAB94-5043-41E4-95CE-55212445C8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{043EAB94-5043-41E4-95CE-55212445C8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{043EAB94-5043-41E4-95CE-55212445C8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{043EAB94-5043-41E4-95CE-55212445C8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86A979BA-B0F8-462E-861A-F445BFB3C6CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A979BA-B0F8-462E-861A-F445BFB3C6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A979BA-B0F8-462E-861A-F445BFB3C6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A979BA-B0F8-462E-861A-F445BFB3C6CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD372367-FFC0-46DF-ACFB-F072CAE733D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD372367-FFC0-46DF-ACFB-F072CAE733D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD372367-FFC0-46DF-ACFB-F072CAE733D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD372367-FFC0-46DF-ACFB-F072CAE733D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4644C99-1C48-49C0-B57F-38E4ED9D5DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4644C99-1C48-49C0-B57F-38E4ED9D5DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4644C99-1C48-49C0-B57F-38E4ED9D5DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4644C99-1C48-49C0-B57F-38E4ED9D5DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56F1EC36-D0CA-4C8B-BD25-4DF4D1EFAB3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F1EC36-D0CA-4C8B-BD25-4DF4D1EFAB3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F1EC36-D0CA-4C8B-BD25-4DF4D1EFAB3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F1EC36-D0CA-4C8B-BD25-4DF4D1EFAB3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA86A6A-6A89-4870-B300-37A7218275B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA86A6A-6A89-4870-B300-37A7218275B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA86A6A-6A89-4870-B300-37A7218275B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA86A6A-6A89-4870-B300-37A7218275B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
