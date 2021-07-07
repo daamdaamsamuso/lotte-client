@@ -52,7 +52,6 @@ namespace lotte_Client.ViewModel
         public void StartDownload()
         {
             ContentViewModel.ServerUri = new Uri(ConfigValue.Instance.WebServerUri);
-            ContentViewModel.TheaterCode = ConfigValue.Instance.CinemaCodesList[0];
             ContentViewModel.ItemID = 999;
             ContentViewModel.LOCAL_AD_PATH = LOCAL_KO_AD_PATH;
             ContentViewModel.FTP_AD_PATH = FTP_KO_AD_PATH;

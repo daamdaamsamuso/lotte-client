@@ -35,16 +35,9 @@ namespace lotte_Client.Databases
             AdverList = new List<Adver>();
         }
 
-        public void SetData(bool useLocal)
+        public void SetData()
         {
-            if (useLocal)
-            {
                 SetDataFromLocal();
-            }
-            else
-            {
-                SetDataFromWebService();
-            }
         }
 
         private void SetDataFromLocal()

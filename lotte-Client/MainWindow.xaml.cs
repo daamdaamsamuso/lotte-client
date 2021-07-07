@@ -141,7 +141,7 @@ namespace lotte_Client
             SystemMessage("File Downloading......");
 
             DatabaseController.Instance.DbCompleted += Instance_DbCompleted;
-            DatabaseController.Instance.SetData(ConfigValue.Instance.IsLocalVersion);
+            DatabaseController.Instance.SetData();
         }
 
         // 데이터베이스 데이터 다운로드 완료 이벤트 (스케줄 시작)
