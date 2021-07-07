@@ -6,11 +6,13 @@
         xmlns:control="clr-namespace:LotteCinemaLibraries.Common.Control;assembly=LotteCinemaLibraries.Common"
         xmlns:uc="clr-namespace:lotte_Client.UserControls"
         xmlns:local="clr-namespace:lotte_Client"
+        
         mc:Ignorable="d"
-         Title="MainWindow" Background="Black" WindowStyle="None" WindowState="Normal" ResizeMode="NoResize" Left="0" Top="0" Width="1600" Height="900">
+         Title="MainWindow" Background="Black" WindowStyle="None" WindowState="Normal" ResizeMode="NoResize" Left="0" Top="0" Width="1080" Height="1920">
     <Grid x:Name="Root">
         <Image x:Name="Img" Stretch="Fill"/>
-        <MediaElement x:Name="Me" LoadedBehavior="Manual" Stretch="Fill"/>
+        <MediaElement x:Name="Me" LoadedBehavior="Manual" Stretch="Fill" Volume="0"/>
+        <uc:UC_Type01 x:Name="Uc" Visibility="Collapsed"/>
         <Viewbox>
             <control:DownloadProgressControl DataContext="{Binding ContentViewModel}" 
                                              Visibility="{Binding DownloadVisible}"

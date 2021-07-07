@@ -5,8 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:lotte_Client.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="1920" d:DesignWidth="1080">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <MediaElement x:Name="uc_me" Grid.Row="0" LoadedBehavior="Manual" Stretch="Fill" Volume="0" />
+        <Image x:Name="uc_img" Grid.Row="1" />
+        <!--<TextBlock x:Name="uc_me" Grid.Row="0" Background="Red" Text="aaaaa" FontSize="300" TextAlignment="Center" />
+        <TextBlock x:Name="uc_img" Grid.Row="1" Background="Blue" Text="bbbbbb" FontSize="300" TextAlignment="Center"  />-->
     </Grid>
 </UserControl>

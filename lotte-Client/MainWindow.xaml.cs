@@ -4,6 +4,7 @@ using lotte_Client.Databases;
 using lotte_Client.Helpers;
 using lotte_Client.Models;
 using lotte_Client.Utils;
+using LotteCinemaService.Model.Common;
 using LotteCinemaService.Model.Enum;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,18 @@ namespace lotte_Client
             DataContext = App.MainViewModel;
             InitializeComponent();
             Loaded += MainWindow_Loaded;
+            Uc.Loaded += Uc_Loaded;
+        }
+
+        private void Uc_Loaded(object sender, RoutedEventArgs e)
+        {
+            Uc.uc_me.MediaOpened += Me_MediaOpened;
+            Me.MediaOpened += Me_MediaOpened;
+        }
+
+        private void Me_MediaOpened(object sender, RoutedEventArgs e)
+        {
+            FadeIn();
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -57,6 +70,8 @@ namespace lotte_Client
             ConfigValue.Instance.LoadConfigValue();
             Width = ConfigValue.Instance.SizeWidth;
             Height = ConfigValue.Instance.SizeHeight;
+            Debug.WriteLine(Width);
+            Debug.WriteLine(Height);
             //Cursor = Cursors.None;
         }
 
@@ -76,18 +91,26 @@ namespace lotte_Client
                 To = 0,
                 Duration = new Duration(TimeSpan.FromSeconds(1.0d))
             };
+            _fadeOutAnimation.Completed += _fadeOutAnimation_Completed;
 
             _fadeOutTimer = new DispatcherTimer();
             _fadeOutTimer.Interval = TimeSpan.FromSeconds(ConfigValue.Instance.DurationTimeSec - 1);
             _fadeOutTimer.Tick += _fadeOutTimer_Tick;
         }
 
+        private void _fadeOutAnimation_Completed(object sender, EventArgs e)
+        {
+            Debug.WriteLine("_fadeOutAnimation_Completed");
+            Play();
+        }
+
         void _fadeOutTimer_Tick(object sender, EventArgs e)
         {
+
             FadeOut();
             //_fadeOutTimer.Stop();
 
-            Play();
+
         }
 
 
@@ -109,6 +132,7 @@ namespace lotte_Client
             {
                 BeginAnimation(OpacityProperty, _fadeOutAnimation);
             }));
+
         }
 
         // 데이터베이스
@@ -164,6 +188,14 @@ namespace lotte_Client
                         ? Visibility.Collapsed
                         : Visibility.Visible;
                     break;
+
+                case Key.F2:
+                    FadeIn();
+                    break;
+
+                case Key.F3:
+                    FadeOut();
+                    break;
             }
 
             base.OnKeyDown(e);
@@ -180,6 +212,56 @@ namespace lotte_Client
         }
 
         // 파일 재생
+        private void PlayVideoImageUc(ContentsInfo source01, ContentsInfo source02)
+        {
+
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                try
+                {
+                    Me.Visibility = Visibility.Collapsed;
+                    Img.Visibility = Visibility.Collapsed;
+                    Uc.Visibility = Visibility.Visible;
+                    Debug.WriteLine("Me:{0}", Me.Visibility);
+                    Debug.WriteLine("Img:{0}", Img.Visibility);
+                    Debug.WriteLine("Uc:{0}", Uc.Visibility);
+                    //Uc.uc_me.Text = source01.LocalFilePath;
+                    Uc.uc_me.Close();
+                    Uc.uc_me.Source = new Uri(source01.LocalFilePath);
+                    Uc.uc_me.Play();
+                    Debug.WriteLine("Play:{0}", DateTime.Now);
+                    
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                    Log.WriteLine(ex.Message);
+                }
+            }));
+
+
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                try
+                {
+                    Me.Visibility = Visibility.Collapsed;
+                    Img.Visibility = Visibility.Collapsed;
+                    Uc.Visibility = Visibility.Visible;
+                    Debug.WriteLine("Me:{0}", Me.Visibility);
+                    Debug.WriteLine("Img:{0}", Img.Visibility);
+                    Debug.WriteLine("Uc:{0}", Uc.Visibility);
+                    //Uc.uc_img.Text = source02.LocalFilePath;
+                    Uc.uc_img.Source = new BitmapImage(new Uri(source02.LocalFilePath));
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                    Log.WriteLine(ex.Message);
+                }
+            }));
+        }
+
+        // 파일 재생
         private void PlayVideoImage(string source, ContentsType type)
         {
             if (type == ContentsType.Video)
@@ -189,6 +271,10 @@ namespace lotte_Client
                     try
                     {
                         Me.Visibility = Visibility.Visible;
+                        Img.Visibility = Visibility.Collapsed;
+                        Uc.Visibility = Visibility.Collapsed;
+                        Debug.WriteLine("Me:{0}", Me.Visibility);
+                        Debug.WriteLine("Img:{0}", Img.Visibility);
                         Me.Close();
                         Me.Source = new Uri(source);
                         Me.Play();
@@ -202,13 +288,17 @@ namespace lotte_Client
             }
             else if (type == ContentsType.Image)
             {
+                FadeIn();
                 Dispatcher.BeginInvoke(new Action(() =>
                 {
                     try
                     {
-                        Img.Source = new BitmapImage(new Uri(source));
                         Me.Visibility = Visibility.Collapsed;
-
+                        Img.Visibility = Visibility.Visible;
+                        Uc.Visibility = Visibility.Collapsed;
+                        Debug.WriteLine("Me:{0}", Me.Visibility);
+                        Debug.WriteLine("Img:{0}", Img.Visibility);
+                        Img.Source = new BitmapImage(new Uri(source));
                     }
                     catch (Exception ex)
                     {
@@ -225,11 +315,10 @@ namespace lotte_Client
         {
             _fadeOutTimer.Stop();
             _fadeOutTimer.Start();
-            FadeIn();
+            
 
-            DatabaseController.Instance.AdverList.ToString();
             var item = DatabaseController.Instance.AdverList[idx];
-            if (idx < (DatabaseController.Instance.AdverList.Count-1))
+            if (idx < (DatabaseController.Instance.AdverList.Count - 1))
             {
                 idx = idx + 1;
             }
@@ -238,14 +327,15 @@ namespace lotte_Client
                 idx = 0;
             }
 
-          
+            Debug.WriteLine(item.Title);
+
             if (item.LayoutType == LayoutType.VideoImage2)
             {
-                PlayVideoImage(item.Contents[0].LocalFilePath, item.Contents[0].ContentsType);
+                PlayVideoImageUc(item.Contents[0], item.Contents[1]);
             }
             else
             {
-                PlayVideoImage(item.Contents[0].LocalFilePath,item.Contents[0].ContentsType);
+                PlayVideoImage(item.Contents[0].LocalFilePath, item.Contents[0].ContentsType);
             }
         }
     }

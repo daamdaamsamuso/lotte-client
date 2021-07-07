@@ -73,9 +73,6 @@
     <Compile Include="Config\ConfigValue.cs" />
     <Compile Include="Databases\DatabaseController.cs" />
     <Compile Include="Models\Data\Adver.cs" />
-    <Compile Include="UserControls\UC_Progress.xaml.cs">
-      <DependentUpon>UC_Progress.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UC_Type01.xaml.cs">
       <DependentUpon>UC_Type01.xaml</DependentUpon>
     </Compile>
@@ -100,10 +97,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserControls\UC_Progress.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UserControls\UC_Type01.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -165,7 +158,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Resource Include="Config\Config.xml" />
+    <Content Include="Config\Config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

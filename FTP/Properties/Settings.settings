@@ -1,15 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FTP.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
   <Profiles />
-  <Settings>
-    <Setting Name="FTP_SERVER_URI" Type="System.String" Scope="User">
-      <Value Profile="(Default)">127.0.0.1</Value>
-    </Setting>
-    <Setting Name="FTP_SERVER_ID" Type="System.String" Scope="User">
-      <Value Profile="(Default)">gofogo</Value>
-    </Setting>
-    <Setting Name="FTP_SERVER_PASSWORD" Type="System.String" Scope="User">
-      <Value Profile="(Default)">2</Value>
-    </Setting>
-  </Settings>
+  <Settings />
 </SettingsFile>

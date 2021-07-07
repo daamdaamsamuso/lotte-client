@@ -78,17 +78,11 @@ namespace lotte_Client.ViewModel
         private void DoDown()
         {
             Debug.WriteLine("FileDonwload Complete");
-
         }
 
         private void DoDownFile(DownloadItem item)
         {
             
         }
-
-
-
-
-
     }
 }

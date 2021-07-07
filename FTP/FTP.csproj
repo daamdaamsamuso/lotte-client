@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\Configs.cs" />
+    <Compile Include="Config\ConfigValue.cs" />
     <Compile Include="Ftp.cs" />
     <Compile Include="FtpConnection.cs" />
     <Compile Include="FtpDirectory.cs" />
@@ -63,6 +65,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\Ftp_Config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

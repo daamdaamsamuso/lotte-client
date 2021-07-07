@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Xml;
 
-namespace lotte_Client.Config
+namespace FTP.Config
 {
     public sealed class Configs
     {
@@ -9,22 +9,14 @@ namespace lotte_Client.Config
         private readonly XmlDocument _doc = new XmlDocument();
 
         private const string EmptyFile =
-            @"<?xml version=""1.0"" encoding=""utf-8"" ?>
-          <configuration>
-              <appSettings>
-                  <add key=""WebServerUri"" value=""http://localhost:55260"" />
-                  <add key=""CinemaCode"" value=""1004,0003"" />
-                  <add key=""DayBaseTimeHour"" value=""4"" />
-                  <add key=""DurationTimeSec"" value=""30"" />
-                  <add key=""IsLocalVersion"" value=""false"" />
-                  <add key=""IsServer"" value=""false"" />
-                  <add key=""ProgramNumber"" value=""1"" />
-                  <add key=""GroupIp"" value=""224.0.0.201"" />
-                  <add key=""GroupPort"" value=""8080"" />
-                  <add key=""SizeWidth"" value=""1080"" />
-                  <add key=""SizeHeight"" value=""1920"" />
-              </appSettings>
-          </configuration>";
+    @"<?xml version=""1.0"" encoding=""utf-8"" ?>
+ <configuration>
+     <appSettings>
+        <add key=""FTP_SERVER_ID"" value=""gofogo"" />
+        <add key = ""FTP_SERVER_PASSWORD"" value=""2"" />
+        <add key = ""FTP_SERVER_URI"" value=""127.0.0.1"" />
+     </appSettings>
+</configuration>";
 
         public Configs(string path, string filename)
         {

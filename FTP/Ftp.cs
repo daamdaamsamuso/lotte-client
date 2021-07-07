@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Text;
+using FTP.Config;
 using FTP.Properties;
 
 namespace FTP
@@ -47,6 +49,7 @@ namespace FTP
 
         public Ftp()
         {
+            ConfigValue.Instance.LoadConfigValue();
             this._uploadClientList = new List<object>();
             this._downloadClientList = new List<object>();
         }
@@ -65,7 +68,7 @@ namespace FTP
         public Ftp(string hostName, string userName, string password)
             : this()
         {
-            this.Connection = new FtpConnection(Settings.Default.FTP_SERVER_URI, Settings.Default.FTP_SERVER_ID, Settings.Default.FTP_SERVER_PASSWORD);
+            this.Connection = new FtpConnection(ConfigValue.Instance.FTP_SERVER_URI, ConfigValue.Instance.FTP_SERVER_ID, ConfigValue.Instance.FTP_SERVER_PASSWORD);
         }
 
         public Ftp(FtpConnection connection)
@@ -628,6 +631,7 @@ namespace FTP
                         var OnDownloadFileAsyncCompleted = DownloadFileAsyncCompleted;
                         if (OnDownloadFileAsyncCompleted != null)
                         {
+                            Debug.WriteLine(this.Connection.HostName);
                             OnDownloadFileAsyncCompleted(this, new FtpAsyncCompletedEventArgs(e.Error, e.Cancelled));
                         }
                     }

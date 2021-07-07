@@ -22,41 +22,5 @@ namespace FTP.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
-        public string FTP_SERVER_URI {
-            get {
-                return ((string)(this["FTP_SERVER_URI"]));
-            }
-            set {
-                this["FTP_SERVER_URI"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("gofogo")]
-        public string FTP_SERVER_ID {
-            get {
-                return ((string)(this["FTP_SERVER_ID"]));
-            }
-            set {
-                this["FTP_SERVER_ID"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public string FTP_SERVER_PASSWORD {
-            get {
-                return ((string)(this["FTP_SERVER_PASSWORD"]));
-            }
-            set {
-                this["FTP_SERVER_PASSWORD"] = value;
-            }
-        }
     }
 }
