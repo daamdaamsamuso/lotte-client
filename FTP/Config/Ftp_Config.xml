@@ -3,6 +3,6 @@
   <appSettings>
     <add key="FTP_SERVER_ID" value="gofogo" />
     <add key="FTP_SERVER_PASSWORD" value="2" />
-    <add key="FTP_SERVER_URI" value="124.0.0.1" />
+    <add key="FTP_SERVER_URI" value="127.0.0.1" />
   </appSettings>
 </configuration>

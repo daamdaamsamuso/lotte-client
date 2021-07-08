@@ -8,11 +8,11 @@
              d:DesignHeight="1920" d:DesignWidth="1080">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="9*" />
+            <RowDefinition Height="16*" />
         </Grid.RowDefinitions>
-        <MediaElement x:Name="uc_me" Grid.Row="0" LoadedBehavior="Manual" Stretch="Fill" Volume="0" />
-        <Image x:Name="uc_img" Grid.Row="1" />
+        <MediaElement x:Name="uc_me" Grid.Row="0" LoadedBehavior="Manual" Stretch="UniformToFill" Volume="0" />
+        <Image x:Name="uc_img" Grid.Row="1" Stretch="UniformToFill" />
         <!--<TextBlock x:Name="uc_me" Grid.Row="0" Background="Red" Text="aaaaa" FontSize="300" TextAlignment="Center" />
         <TextBlock x:Name="uc_img" Grid.Row="1" Background="Blue" Text="bbbbbb" FontSize="300" TextAlignment="Center"  />-->
     </Grid>

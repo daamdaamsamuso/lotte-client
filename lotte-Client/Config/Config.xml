@@ -2,10 +2,10 @@
 <configuration>
   <appSettings>
     <add key="WebServerUri" value="http://127.0.0.1:3000" />
-    <add key="DurationTimeSec" value="30" />
+    <add key="DurationTimeSec" value="5" />
     <add key="GroupIp" value="224.0.0.201" />
     <add key="GroupPort" value="8080" />
-    <add key="SizeWidth" value="1080" />
-    <add key="SizeHeight" value="1920" />
+    <add key="SizeWidth" value="540" />
+    <add key="SizeHeight" value="960" />
   </appSettings>
 </configuration>

@@ -27,7 +27,7 @@
                                              />
         </Viewbox>
         <Grid>
-            <TextBlock x:Name="SystemMessageTextBlock" Text="Loading......" FontSize="10" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,0,0,0" TextWrapping="Wrap" />
+            <TextBlock x:Name="SystemMessageTextBlock" Text="Loading......" FontSize="20" Foreground="PaleVioletRed" FontWeight="Bold"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,0,0,0" TextWrapping="Wrap" />
             <Rectangle Width="Auto" Height="40" VerticalAlignment="Top" Fill="#00000000" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown"/>
             <Rectangle Width="40" Height="Auto" HorizontalAlignment="Right" Fill="#00000000" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown"/>
             <Rectangle Width="40" Height="Auto" HorizontalAlignment="Left" Fill="#00000000" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown"/>

@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -30,9 +31,6 @@ namespace lotte_Client
 {
     public partial class MainWindow : Window
     {
-        private bool _isServer;
-        private int _programNumber;
-
         private DispatcherTimer _fadeOutTimer;
         private DoubleAnimation _fadeInAnimation;
         private DoubleAnimation _fadeOutAnimation;
@@ -53,6 +51,12 @@ namespace lotte_Client
 
         private void Me_MediaOpened(object sender, RoutedEventArgs e)
         {
+            MediaElement item = sender as MediaElement;
+            ChangeTime((int)item.NaturalDuration.TimeSpan.TotalSeconds);
+            
+            _fadeOutTimer.Stop();
+            _fadeOutTimer.Start();
+            Debug.WriteLine(" _fadeOutTimer.Interval:{0}", _fadeOutTimer.Interval);
             FadeIn();
         }
 
@@ -98,6 +102,18 @@ namespace lotte_Client
             _fadeOutTimer.Tick += _fadeOutTimer_Tick;
         }
 
+        public void ChangeTime(int time)
+        {
+            _fadeOutTimer.Interval = TimeSpan.FromSeconds(time - 1);
+            SystemMessage("런닝타임:" + time+"초");
+        }
+
+        public void ChangeTimeDefault()
+        {
+            _fadeOutTimer.Interval = TimeSpan.FromSeconds(ConfigValue.Instance.DurationTimeSec - 1);
+            SystemMessage("런닝타임:" + ConfigValue.Instance.DurationTimeSec + "초");
+        }
+
         private void _fadeOutAnimation_Completed(object sender, EventArgs e)
         {
             Debug.WriteLine("_fadeOutAnimation_Completed");
@@ -132,7 +148,6 @@ namespace lotte_Client
             {
                 BeginAnimation(OpacityProperty, _fadeOutAnimation);
             }));
-
         }
 
         // 데이터베이스
@@ -150,7 +165,7 @@ namespace lotte_Client
             if (DatabaseController.Instance.AdverList.Count == 0)
             {
                 //LogController.Instance.NoAdver();
-            }
+            }   
 
             InitScheduleController();
 
@@ -162,8 +177,6 @@ namespace lotte_Client
         {
             SystemMessage("System Loading......");
             Play();
-
-
         }
 
 
@@ -313,10 +326,6 @@ namespace lotte_Client
 
         private void Play()
         {
-            _fadeOutTimer.Stop();
-            _fadeOutTimer.Start();
-            
-
             var item = DatabaseController.Instance.AdverList[idx];
             if (idx < (DatabaseController.Instance.AdverList.Count - 1))
             {
@@ -329,14 +338,36 @@ namespace lotte_Client
 
             Debug.WriteLine(item.Title);
 
+            if(item.Contents[0].ContentsType == ContentsType.Image)
+            {
+                ChangeTimeDefault();
+                _fadeOutTimer.Stop();
+                _fadeOutTimer.Start();
+                Debug.WriteLine(" _fadeOutTimer.Interval:{0}", _fadeOutTimer.Interval);
+            }
+
+
             if (item.LayoutType == LayoutType.VideoImage2)
             {
+                
                 PlayVideoImageUc(item.Contents[0], item.Contents[1]);
             }
             else
             {
                 PlayVideoImage(item.Contents[0].LocalFilePath, item.Contents[0].ContentsType);
             }
+        }
+
+        private void Meele_MediaOpened(object sender, RoutedEventArgs e)
+        {
+            MediaElement item = sender as MediaElement;
+            ChangeTime((int)item.NaturalDuration.TimeSpan.TotalSeconds);
+            _fadeOutTimer.Stop();
+            _fadeOutTimer.Start();
+            Debug.WriteLine(" _fadeOutTimer.Interval:{0}", _fadeOutTimer.Interval);
+            item.Stop();
+            item.Close();
+            item.MediaOpened -= Meele_MediaOpened;
         }
     }
 }

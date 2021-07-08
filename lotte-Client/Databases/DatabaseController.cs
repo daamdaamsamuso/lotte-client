@@ -37,7 +37,7 @@ namespace lotte_Client.Databases
 
         public void SetData()
         {
-                SetDataFromLocal();
+            SetDataFromWebService();
         }
 
         private void SetDataFromLocal()
