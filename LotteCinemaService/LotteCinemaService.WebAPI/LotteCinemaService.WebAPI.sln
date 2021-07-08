@@ -1,0 +1,146 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40418.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.WebAPI.Common", "LotteCinemaService.WebAPI.Common\LotteCinemaService.WebAPI.Common.csproj", "{E382E176-FBEF-4039-B4D9-D8D596F9EE7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{E2C99009-B357-4A7D-8A16-559BCCF1C574}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{F715FD47-A843-433D-B4E9-A6D0D074427D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaLibraries.Database", "..\..\LotteCinemaLibraries\LotteCinemaLibraries.Database\LotteCinemaLibraries.Database\LotteCinemaLibraries.Database.csproj", "{24D7ABA2-B332-4A87-9C9C-CDDBDCD7E892}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{33389333-3EAB-4F96-85AA-A27A42A12113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.Database.Manager", "..\LotteCinemaService.Database.Common\LotteCinemaService.Database.Manager.csproj", "{92AD2B68-2C80-4681-8AEC-1006ECFE5191}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{6EB44F1A-5789-416F-B681-228B0C9CB86B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.Model.Common", "..\LotteCinemaService.Model.Common\LotteCinemaService.Model.Common.csproj", "{D4644C99-1C48-49C0-B57F-38E4ED9D5DF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.Model.TBA", "..\LotteCinemaService.Model.TBA\LotteCinemaService.Model.TBA.csproj", "{658A348F-BDFD-45D2-B15E-7DD3996F59AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.WebAPI.Helper", "LotteCinemaService.WebAPI.Helper\LotteCinemaService.WebAPI.Helper.csproj", "{DBA86A6A-6A89-4870-B300-37A7218275B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.WebAPI.TBA", "LotteCinemaService.WebAPI.TBA\LotteCinemaService.WebAPI.TBA.csproj", "{60BAE0D1-BCB5-4ADA-9BC9-29D263B4C2A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.Database.Helper", "LotteCinemaService.Database.Helper\LotteCinemaService.Database.Helper.csproj", "{056B2D87-7D8E-4898-A49C-98EFF3CF2FE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.Model.Enum", "..\LotteCinemaService.Model.Enum\LotteCinemaService.Model.Enum.csproj", "{56F1EC36-D0CA-4C8B-BD25-4DF4D1EFAB3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaLibraries.Config", "..\..\LotteCinemaLibraries\LotteCinemaLibraries.Config\LotteCinemaLibraries.Config\LotteCinemaLibraries.Config.csproj", "{38857EC8-A1C6-4F8C-AF4A-7E2C7BC58709}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helper", "Helper", "{CF1B9F2D-F735-4F96-89BB-C064D2218292}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00Version - Original", "00Version - Original", "{B014BF31-3D90-4E96-A197-A17B892B7307}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 11
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://isdev.vi-nyl.com:8080/tfs/idxcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\..\\LotteCinemaLibraries\\LotteCinemaLibraries.Database\\LotteCinemaLibraries.Database\\LotteCinemaLibraries.Database.csproj
+		SccProjectTopLevelParentUniqueName1 = LotteCinemaService.WebAPI.sln
+		SccProjectName1 = ../../LotteCinemaLibraries/LotteCinemaLibraries.Database/LotteCinemaLibraries.Database
+		SccLocalPath1 = ..\\..\\LotteCinemaLibraries\\LotteCinemaLibraries.Database\\LotteCinemaLibraries.Database
+		SccProjectUniqueName2 = LotteCinemaService.WebAPI.Common\\LotteCinemaService.WebAPI.Common.csproj
+		SccProjectTopLevelParentUniqueName2 = LotteCinemaService.WebAPI.sln
+		SccProjectName2 = LotteCinemaService.WebAPI.Common
+		SccLocalPath2 = LotteCinemaService.WebAPI.Common
+		SccProjectUniqueName3 = ..\\LotteCinemaService.Model.Common\\LotteCinemaService.Model.Common.csproj
+		SccProjectTopLevelParentUniqueName3 = LotteCinemaService.WebAPI.sln
+		SccProjectName3 = ../LotteCinemaService.Model.Common
+		SccLocalPath3 = ..\\LotteCinemaService.Model.Common
+		SccProjectUniqueName4 = ..\\LotteCinemaService.Model.TBA\\LotteCinemaService.Model.TBA.csproj
+		SccProjectTopLevelParentUniqueName4 = LotteCinemaService.WebAPI.sln
+		SccProjectName4 = ../LotteCinemaService.Model.TBA
+		SccLocalPath4 = ..\\LotteCinemaService.Model.TBA
+		SccProjectUniqueName5 = LotteCinemaService.WebAPI.Helper\\LotteCinemaService.WebAPI.Helper.csproj
+		SccProjectTopLevelParentUniqueName5 = LotteCinemaService.WebAPI.sln
+		SccProjectName5 = LotteCinemaService.WebAPI.Helper
+		SccLocalPath5 = LotteCinemaService.WebAPI.Helper
+		SccProjectUniqueName6 = LotteCinemaService.WebAPI.TBA\\LotteCinemaService.WebAPI.TBA.csproj
+		SccProjectTopLevelParentUniqueName6 = LotteCinemaService.WebAPI.sln
+		SccProjectName6 = LotteCinemaService.WebAPI.TBA
+		SccLocalPath6 = LotteCinemaService.WebAPI.TBA
+		SccProjectUniqueName7 = LotteCinemaService.Database.Helper\\LotteCinemaService.Database.Helper.csproj
+		SccProjectTopLevelParentUniqueName7 = LotteCinemaService.WebAPI.sln
+		SccProjectName7 = LotteCinemaService.Database.Helper
+		SccLocalPath7 = LotteCinemaService.Database.Helper
+		SccProjectUniqueName8 = ..\\LotteCinemaService.Model.Enum\\LotteCinemaService.Model.Enum.csproj
+		SccProjectTopLevelParentUniqueName8 = LotteCinemaService.WebAPI.sln
+		SccProjectName8 = ../LotteCinemaService.Model.Enum
+		SccLocalPath8 = ..\\LotteCinemaService.Model.Enum
+		SccProjectUniqueName9 = ..\\..\\LotteCinemaLibraries\\LotteCinemaLibraries.Config\\LotteCinemaLibraries.Config\\LotteCinemaLibraries.Config.csproj
+		SccProjectTopLevelParentUniqueName9 = LotteCinemaService.WebAPI.sln
+		SccProjectName9 = ../../LotteCinemaLibraries/LotteCinemaLibraries.Config/LotteCinemaLibraries.Config
+		SccLocalPath9 = ..\\..\\LotteCinemaLibraries\\LotteCinemaLibraries.Config\\LotteCinemaLibraries.Config
+		SccProjectUniqueName10 = ..\\LotteCinemaService.Database.Common\\LotteCinemaService.Database.Manager.csproj
+		SccProjectTopLevelParentUniqueName10 = LotteCinemaService.WebAPI.sln
+		SccProjectName10 = ../LotteCinemaService.Database.Common
+		SccLocalPath10 = ..\\LotteCinemaService.Database.Common
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E382E176-FBEF-4039-B4D9-D8D596F9EE7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E382E176-FBEF-4039-B4D9-D8D596F9EE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E382E176-FBEF-4039-B4D9-D8D596F9EE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E382E176-FBEF-4039-B4D9-D8D596F9EE7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24D7ABA2-B332-4A87-9C9C-CDDBDCD7E892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D7ABA2-B332-4A87-9C9C-CDDBDCD7E892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D7ABA2-B332-4A87-9C9C-CDDBDCD7E892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D7ABA2-B332-4A87-9C9C-CDDBDCD7E892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92AD2B68-2C80-4681-8AEC-1006ECFE5191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92AD2B68-2C80-4681-8AEC-1006ECFE5191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92AD2B68-2C80-4681-8AEC-1006ECFE5191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92AD2B68-2C80-4681-8AEC-1006ECFE5191}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4644C99-1C48-49C0-B57F-38E4ED9D5DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4644C99-1C48-49C0-B57F-38E4ED9D5DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4644C99-1C48-49C0-B57F-38E4ED9D5DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4644C99-1C48-49C0-B57F-38E4ED9D5DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{658A348F-BDFD-45D2-B15E-7DD3996F59AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{658A348F-BDFD-45D2-B15E-7DD3996F59AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{658A348F-BDFD-45D2-B15E-7DD3996F59AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{658A348F-BDFD-45D2-B15E-7DD3996F59AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA86A6A-6A89-4870-B300-37A7218275B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA86A6A-6A89-4870-B300-37A7218275B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA86A6A-6A89-4870-B300-37A7218275B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA86A6A-6A89-4870-B300-37A7218275B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60BAE0D1-BCB5-4ADA-9BC9-29D263B4C2A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60BAE0D1-BCB5-4ADA-9BC9-29D263B4C2A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60BAE0D1-BCB5-4ADA-9BC9-29D263B4C2A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60BAE0D1-BCB5-4ADA-9BC9-29D263B4C2A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{056B2D87-7D8E-4898-A49C-98EFF3CF2FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056B2D87-7D8E-4898-A49C-98EFF3CF2FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056B2D87-7D8E-4898-A49C-98EFF3CF2FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056B2D87-7D8E-4898-A49C-98EFF3CF2FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56F1EC36-D0CA-4C8B-BD25-4DF4D1EFAB3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F1EC36-D0CA-4C8B-BD25-4DF4D1EFAB3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F1EC36-D0CA-4C8B-BD25-4DF4D1EFAB3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F1EC36-D0CA-4C8B-BD25-4DF4D1EFAB3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38857EC8-A1C6-4F8C-AF4A-7E2C7BC58709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38857EC8-A1C6-4F8C-AF4A-7E2C7BC58709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38857EC8-A1C6-4F8C-AF4A-7E2C7BC58709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38857EC8-A1C6-4F8C-AF4A-7E2C7BC58709}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E382E176-FBEF-4039-B4D9-D8D596F9EE7F} = {E2C99009-B357-4A7D-8A16-559BCCF1C574}
+		{24D7ABA2-B332-4A87-9C9C-CDDBDCD7E892} = {F715FD47-A843-433D-B4E9-A6D0D074427D}
+		{92AD2B68-2C80-4681-8AEC-1006ECFE5191} = {33389333-3EAB-4F96-85AA-A27A42A12113}
+		{D4644C99-1C48-49C0-B57F-38E4ED9D5DF7} = {6EB44F1A-5789-416F-B681-228B0C9CB86B}
+		{658A348F-BDFD-45D2-B15E-7DD3996F59AE} = {6EB44F1A-5789-416F-B681-228B0C9CB86B}
+		{DBA86A6A-6A89-4870-B300-37A7218275B8} = {CF1B9F2D-F735-4F96-89BB-C064D2218292}
+		{60BAE0D1-BCB5-4ADA-9BC9-29D263B4C2A7} = {E2C99009-B357-4A7D-8A16-559BCCF1C574}
+		{056B2D87-7D8E-4898-A49C-98EFF3CF2FE4} = {CF1B9F2D-F735-4F96-89BB-C064D2218292}
+		{56F1EC36-D0CA-4C8B-BD25-4DF4D1EFAB3F} = {6EB44F1A-5789-416F-B681-228B0C9CB86B}
+		{38857EC8-A1C6-4F8C-AF4A-7E2C7BC58709} = {F715FD47-A843-433D-B4E9-A6D0D074427D}
+	EndGlobalSection
+EndGlobal

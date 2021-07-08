@@ -17,7 +17,7 @@ namespace lotte_Client.ViewModel
 
         // KIOSK
         public static readonly string LOCAL_KO_AD_PATH = "AD";
-        public static readonly string FTP_KO_AD_PATH = "AD";
+        public static readonly string FTP_KO_AD_PATH = "/DID/SmartKioskDID/AD/";
 
         public static readonly string FTP_SERVER_NAME = "127.0.0.1";
         public static readonly string FTP_USER_NAME = "gofogo";

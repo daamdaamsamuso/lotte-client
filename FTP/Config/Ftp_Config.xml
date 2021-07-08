@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <appSettings>
-    <add key="FTP_SERVER_ID" value="gofogo" />
-    <add key="FTP_SERVER_PASSWORD" value="2" />
-    <add key="FTP_SERVER_URI" value="127.0.0.1" />
+    <add key="FTP_SERVER_ID" value="lhsftp" />
+    <add key="FTP_SERVER_PASSWORD" value="anqltmxm@LHS" />
+    <add key="FTP_SERVER_URI" value="124.243.42.39:40051" />
   </appSettings>
 </configuration>

@@ -139,19 +139,19 @@
       <Project>{86a979ba-b0f8-462e-861a-f445bfb3c6cd}</Project>
       <Name>FTP</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\lotte\LotteCinemaLibraries\LotteCinemaLibraries.Common\LotteCinemaLibraries.Common.csproj">
+    <ProjectReference Include="..\LotteCinemaLibraries\LotteCinemaLibraries.Common\LotteCinemaLibraries.Common.csproj">
       <Project>{dd372367-ffc0-46df-acfb-f072cae733d5}</Project>
       <Name>LotteCinemaLibraries.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\lotte\LotteCinemaService\LotteCinemaService.Model.Common\LotteCinemaService.Model.Common.csproj">
+    <ProjectReference Include="..\LotteCinemaService\LotteCinemaService.Model.Common\LotteCinemaService.Model.Common.csproj">
       <Project>{d4644c99-1c48-49c0-b57f-38e4ed9d5df7}</Project>
       <Name>LotteCinemaService.Model.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\lotte\LotteCinemaService\LotteCinemaService.Model.Enum\LotteCinemaService.Model.Enum.csproj">
+    <ProjectReference Include="..\LotteCinemaService\LotteCinemaService.Model.Enum\LotteCinemaService.Model.Enum.csproj">
       <Project>{56f1ec36-d0ca-4c8b-bd25-4df4d1efab3f}</Project>
       <Name>LotteCinemaService.Model.Enum</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\lotte\LotteCinemaService\LotteCinemaService.WebAPI\LotteCinemaService.WebAPI.Helper\LotteCinemaService.WebAPI.Helper.csproj">
+    <ProjectReference Include="..\LotteCinemaService\LotteCinemaService.WebAPI\LotteCinemaService.WebAPI.Helper\LotteCinemaService.WebAPI.Helper.csproj">
       <Project>{dba86a6a-6a89-4870-b300-37a7218275b8}</Project>
       <Name>LotteCinemaService.WebAPI.Helper</Name>
     </ProjectReference>

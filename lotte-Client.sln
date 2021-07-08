@@ -9,13 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTP", "FTP\FTP.csproj", "{86A979BA-B0F8-462E-861A-F445BFB3C6CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaLibraries.Common", "D:\lotte\LotteCinemaLibraries\LotteCinemaLibraries.Common\LotteCinemaLibraries.Common.csproj", "{DD372367-FFC0-46DF-ACFB-F072CAE733D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaLibraries.Common", "LotteCinemaLibraries\LotteCinemaLibraries.Common\LotteCinemaLibraries.Common.csproj", "{DD372367-FFC0-46DF-ACFB-F072CAE733D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.Model.Common", "D:\lotte\LotteCinemaService\LotteCinemaService.Model.Common\LotteCinemaService.Model.Common.csproj", "{D4644C99-1C48-49C0-B57F-38E4ED9D5DF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.Model.Common", "LotteCinemaService\LotteCinemaService.Model.Common\LotteCinemaService.Model.Common.csproj", "{D4644C99-1C48-49C0-B57F-38E4ED9D5DF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.Model.Enum", "D:\lotte\LotteCinemaService\LotteCinemaService.Model.Enum\LotteCinemaService.Model.Enum.csproj", "{56F1EC36-D0CA-4C8B-BD25-4DF4D1EFAB3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.Model.Enum", "LotteCinemaService\LotteCinemaService.Model.Enum\LotteCinemaService.Model.Enum.csproj", "{56F1EC36-D0CA-4C8B-BD25-4DF4D1EFAB3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.WebAPI.Helper", "D:\lotte\LotteCinemaService\LotteCinemaService.WebAPI\LotteCinemaService.WebAPI.Helper\LotteCinemaService.WebAPI.Helper.csproj", "{DBA86A6A-6A89-4870-B300-37A7218275B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteCinemaService.WebAPI.Helper", "LotteCinemaService\LotteCinemaService.WebAPI\LotteCinemaService.WebAPI.Helper\LotteCinemaService.WebAPI.Helper.csproj", "{DBA86A6A-6A89-4870-B300-37A7218275B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

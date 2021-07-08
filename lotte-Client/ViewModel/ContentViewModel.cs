@@ -39,7 +39,7 @@ namespace lotte_Client.ViewModel
         protected override void OnDownload()
         {
             var groupInfoList = new List<GroupInfo>();
-            var query = WebApiCommonQuery.GetAdInfoList_test(this.TheaterCode, this.ItemID, false);
+            var query = WebApiCommonQuery.GetAdInfoList("1023",401,false);
             AdInfoList = WebApiHelper.GetResultJson<List<AdInfo>>(query, this.ServerUri);
             DownloadMessage = "광고 파일을 확인 중입니다.";
 

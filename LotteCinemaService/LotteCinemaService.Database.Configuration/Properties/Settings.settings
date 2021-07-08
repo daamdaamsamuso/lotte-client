@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LotteCinemaService.Database.Configuration.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ticket_db_name" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">lcnew</Value>
+    </Setting>
+    <Setting Name="web_db_addr" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10.51.241.245,7702</Value>
+    </Setting>
+    <Setting Name="web_db_name" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LHS</Value>
+    </Setting>
+    <Setting Name="ticket_db_addr" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10.51.242.10,7701</Value>
+    </Setting>
+    <Setting Name="ticket_db_id" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">lces_select</Value>
+    </Setting>
+    <Setting Name="ticket_db_pw" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">select</Value>
+    </Setting>
+    <Setting Name="web_db_id" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">lces_select</Value>
+    </Setting>
+    <Setting Name="web_db_pw" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">select</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

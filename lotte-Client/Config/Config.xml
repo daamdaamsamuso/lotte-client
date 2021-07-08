@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <appSettings>
-    <add key="WebServerUri" value="http://127.0.0.1:3000" />
+    <add key="WebServerUri" value="http://10.119.1.40:8080" />
     <add key="DurationTimeSec" value="5" />
     <add key="GroupIp" value="224.0.0.201" />
     <add key="GroupPort" value="8080" />

@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="LotteCinemaLibraries.Common.Control.DownloadProgressControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LotteCinemaLibraries.Common.Control"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920"
+             x:Name="userControl" FontFamily="Helvetica67-CondensedMedium">
+
+    <UserControl.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="YDIYGO330"/>
+            <Setter Property="FontSize" Value="55"/>
+            <Setter Property="Foreground" Value="#FFD5D5D5"/>
+        </Style>
+
+        <Style TargetType="{x:Type ProgressBar}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ProgressBar}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Determinate"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Grid x:Name="TemplateRoot" SnapsToDevicePixels="true">
+                                <Rectangle x:Name="PART_Track" Fill="{TemplateBinding Background}" RadiusX="5" RadiusY="5"/>
+                                <Decorator x:Name="PART_Indicator" HorizontalAlignment="Left">
+                                    <Grid x:Name="PART_GlowRect">
+                                        <Border CornerRadius="5,0,0,5" Background="{TemplateBinding BorderBrush}"/>
+                                    </Grid>
+                                </Decorator>
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="#99000000" IsHitTestVisible="False">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                <TextBlock Text="{Binding DownloadMessage, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:DownloadProgressControl}}" Margin="0,0,20,0" FontFamily="YDIYGO330"/>
+                <TextBlock Text="{Binding DownloadCount, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:DownloadProgressControl}}"/>
+                <TextBlock Text="/" Margin="10,0" FontSize="45"/>
+                <TextBlock Text="{Binding DownloadTotalCount, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:DownloadProgressControl}}"/>
+            </StackPanel>
+            <Grid Height="70" Margin="0,0,0,10" Visibility="{Binding VisibleDownloadProgress, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:DownloadProgressControl}}">
+                <ProgressBar x:Name="progressBar" Value="{Binding DownloadPercentage, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:DownloadProgressControl}}" Background="#FFFF8F53" BorderBrush="#FFCC2828"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Text="{Binding Value, ElementName=progressBar}" Foreground="Black" Margin="0,0,10,0"/>
+                    <TextBlock HorizontalAlignment="Center" Text="%" Foreground="Black"/>
+                </StackPanel>
+            </Grid>
+            <TextBlock Text="{Binding DownloadFileName, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:DownloadProgressControl}}" 
+                       Visibility="{Binding VisibleDownloadProgress, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:DownloadProgressControl}}"
+                       HorizontalAlignment="Right" Margin="0,0,0,10" FontSize="30"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,10"
+                        Visibility="{Binding VisibleDownloadProgress, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:DownloadProgressControl}}">
+                <TextBlock Text="{Binding DownloadByte, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:DownloadProgressControl}, StringFormat={}n0}" FontSize="30"/>
+                <TextBlock Text="/" Margin="10,0" FontSize="25"/>
+                <TextBlock Text="{Binding DownloadTotalByte, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:DownloadProgressControl}, StringFormat={}n0}" FontSize="30"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
